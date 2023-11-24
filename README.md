@@ -7,7 +7,7 @@
 - 혼자 하는 가위바위보 게임
 - 개발 기간 : 2023.11.24
 - 개발 인원 : 4명
-- URL : 
+- URL : https://frontend-1th-rsp-go.vercel.app/
 
 <br/>
 <br/>
