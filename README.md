@@ -1,6 +1,7 @@
 # RSP_Go
 
 <br/>
+<br/>
 
 ## 📝 프로젝트 소개
 - 혼자 하는 가위바위보 게임
@@ -9,6 +10,7 @@
 - URL : 
 
 <br/>
+<br/>
 
 ## 🙋‍♂️ 팀원 소개
 
@@ -16,6 +18,7 @@
 | -------------------------------------- | ----------------------------------------- | ---------------------------------------- | ------------------------------------------ |
 | ![김민선](https://github.com/mins-n.png) | ![이규리](https://github.com/KyuliLee.png) | ![송원섭](https://github.com/sws6641.png) | ![김유은](https://github.com/YueunKim.png) |
 
+<br/>
 <br/>
 
 ## 🛠 기술 스택
@@ -36,12 +39,15 @@
 ![Slack](https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=Slack&logoColor=white)
 
 <br/>
+<br/>
 
 ## 💻 협업 방식
 
 1. 기능별 feature branch 생성 (HTML 마크업, CSS 스타일링, JS 기능 구현), PR 및 Merge (approve 1명)
 2. 슬랙으로 코드 공유
+3. Github Dasktop 사용
 
+<br/>
 <br/>
 
 ## ✔ 핵심 기능
@@ -56,11 +62,27 @@
 - 사람은 최대 4명까지만 추가할 수 있습니다.
 
 <br/>
+<br/>
 
 ## 🎯 트러블 슈팅
 
-1.
+### 1. 가위 바위 보 선택 기능 
+  - 각 플레이어의 선택 항목을 input태그를 사용해 직접 입력하였지만, 사용자의 직접 입력 방식과 오타문제 등 UX의 불편함이 발생하여 button태그로 리팩토링 진행
+  - 참여자 추가, 삭제 시 마다 사용자의 입력을 받기 위해 아래의 함수를 추가함
+  ```
+  function getRSP(){
+    const selectsArray = document.querySelectorAll('.select-box');
+    selectsArray.forEach((selects, idx) => {
+        selects.querySelectorAll(".selected").forEach((selected,value) => {
+            selected.addEventListener("click",()=>{pelpleRspArray[idx] = value;
+            console.log(pelpleRspArray);})
+        });
+    });
+}
+  ```
+2. 
 
+<br/>
 <br/>
 
 ## 😀 느낀 점
