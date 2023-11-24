@@ -5,7 +5,7 @@ let removeButton = document.getElementById('removePerson');
 /**
  * 사람 추가시 클래스 구분값
  */
-let count = 2;
+let count = 2; 
 
 
 /** 
