@@ -2,7 +2,7 @@
 
 <br/>
 
-## 프로젝트 소개 + 기능 시연
+## 📝 프로젝트 소개
 - 혼자 하는 가위바위보 게임
 - 개발 기간 : 2023.11.24
 - 개발 인원 : 4명
@@ -10,7 +10,7 @@
 
 <br/>
 
-## 팀원 소개
+## 🙋‍♂️ 팀원 소개
 
 | [김민선](https://github.com/mins-n)      | [이규리](https://github.com/KyuliLee)      | [송원섭](https://github.com/sws6641)      | [김유은](https://github.com/YueunKim)      |
 | -------------------------------------- | ----------------------------------------- | ---------------------------------------- | ------------------------------------------ |
@@ -18,7 +18,7 @@
 
 <br/>
 
-## 기술 스택
+## 🛠 기술 스택
 ### Environment
 
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=for-the-badge&logo=Visual%20Studio%20Code&logoColor=white)
@@ -37,14 +37,14 @@
 
 <br/>
 
-## 협업 방식
+## 💻 협업 방식
 
 1. 기능별 feature branch 생성 (HTML 마크업, CSS 스타일링, JS 기능 구현), PR 및 Merge (approve 1명)
 2. 슬랙으로 코드 공유
 
 <br/>
 
-## 핵심 기능
+## ✔ 핵심 기능
 
 ### 1. 가위 바위 보 
 - 
@@ -57,13 +57,13 @@
 
 <br/>
 
-## 트러블 슈팅
+## 🎯 트러블 슈팅
 
 1.
 
 <br/>
 
-## 느낀 점
+## 😀 느낀 점
 
 - 김민선 : 
 - 이규리 : 
