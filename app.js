@@ -38,7 +38,6 @@ let human = 2; // 참가자 수
 let pelpleRspArray =[];
 function getRSP(){
     const selectsArray = document.querySelectorAll('.select-box');
-
     selectsArray.forEach((selects, idx) => {
         selects.querySelectorAll(".selected").forEach((selected,value) => {
             selected.addEventListener("click",()=>{pelpleRspArray[idx] = value;
@@ -104,7 +103,8 @@ resultButton.addEventListener('click', () => {
     for(let i = 0; i <human; i++){
         if(typeof pelpleRspArray[i] === 'undefined'){ pelpleRspArray[i] = 0}
     }
-    let rspSet = new Set(pelpleRspArray);
+    console.log(pelpleRspArray.slice(0, human));
+    let rspSet = new Set(pelpleRspArray.slice(0, human));
     rspSet = [...rspSet]
     if(rspSet.length === 2){
         let victory = rspLogic(rspSet[0], rspSet[1])
