@@ -5,20 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RSP GO</title>
-    <script src="app.js"></script>
+    <script defer src="app.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
         <h1>RSP Go</h1>
-        <div class="people">
-            <div class="people-img">사람 이미지</div>
-            <input type="text" />
+        <div id="people">
+            <div class="person1">
+                <div class="people-img">사람 이미지</div>
+                <input type="text" />
+            </div>
+            <div class="person2">
+                <div class="people-img">사람 이미지</div>
+                <input type="text" />
+            </div>
         </div>
         <div class="people-add">
-            <button>사람 추가</button>
-            <button>사람 삭제</button>
+            <button id="addPerson">사람 추가</button>
+            <button id="removePerson">사람 삭제</button>
         </div>
         <div class="result">
             <h2>결과</h2>
