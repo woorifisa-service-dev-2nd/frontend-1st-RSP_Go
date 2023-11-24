@@ -109,7 +109,7 @@
     font-size: 20px;
     line-height: 16px;
     padding: 7px 10px;
-    margin: 5px 7px;
+    margin: 5px 0px;
     box-sizing: border-box;
 }
 
@@ -118,6 +118,9 @@
     width: 184px;
     border-radius: 8px;
     box-sizing: border-box;
+    margin-left: 8px;
 }
 
-
+ul li, ul li button {
+    width: 100%;
+}
