@@ -4,35 +4,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>RSP GO</title>
     <script defer src="app.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gothic+A1:wght@100&family=Hi+Melody&family=IBM+Plex+Sans+KR:wght@100;600;700&family=Marhey&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body>
-    <div class="container">
-        <h1>RSP Go</h1>
-        <div id="people">
-            <div class="person">
-                <div class="people-img">사람 이미지1</div>
-                <input class="rsp" type="text" />
+    <div class="container flex-direction-column">
+        <p class="tittle">RSP Go</p>
+        <div class="container">
+            <div class="main-box background container margin-bottom flex-direction-column margin-container">
+                <div class="container" id ="people">
+                    <div class="container person flex-direction-column">
+                        <div class="people-img">
+                            <img src="https://img.icons8.com/ios/250/000000/air-jordan.png">
+                        </div>
+                        <ul class="container flex-direction-column select-box">
+                            <li> <button value="0" class="selected">가위 </button></li>
+                            <li> <button value="1" class="selected">바위</button></li>
+                            <li> <button value="2" class="selected">보</button></li>
+                        </ul>
+                    </div>
+                    <div class="container person flex-direction-column">
+                        <div class="people-img">
+                            <img src="https://img.icons8.com/ios/250/000000/air-jordan.png">
+                        </div>
+                        <ul class="container flex-direction-column select-box">
+                            <li> <button value="0" class="selected">가위 </button></li>
+                            <li> <button value="1" class="selected">바위</button></li>
+                            <li> <button value="2" class="selected">보</button></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="person">
-                <div class="people-img">사람 이미지2</div>
-                <input class="rsp" type="text" />
+            <div class="side-box container flex-direction-column margin-container">
+                <button class="right-btn">결과 보기</button>
+                <button class="right-btn" id="addPerson">사람 추가</button>
+                <button class="right-btn" id="removePerson">사람 삭제</button>
+                <button class="right-btn" id="resetBtn">다시하기</button>
             </div>
-        </div>
-        <div class="people-add">
-            <button id="addPerson">사람 추가</button>
-            <button id="removePerson">사람 삭제</button>
         </div>
         <div class="result">
             <h2>결과</h2>
-            <button id="resultBtn">결과 보기</button>
-            <div id="result-text">결과 내용</div>
-        </div>
-        <div class="reset">
-            <button id="resetBtn">다시하기</button>
+            <div class="result-text">결과 내용</div>
         </div>
     </div>
 </body>
