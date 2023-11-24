@@ -1,4 +1,37 @@
 /**
+ * 처음 사람 이미지 
+ */
+imgSrcArray = [
+    "https://img.icons8.com/ios/250/000000/user-male.png",
+    "https://img.icons8.com/ios/250/000000/businessman.png",
+    "https://img.icons8.com/ios/250/000000/user.png",
+    "https://img.icons8.com/ios/250/000000/user-female.png",
+    "https://img.icons8.com/ios/250/000000/air-jordan.png",
+    "https://img.icons8.com/ios/250/000000/reddit.png",
+    "https://img.icons8.com/ios/250/000000/twitter.png",
+    "https://img.icons8.com/ios-filled/250/000000/mac-os.png",
+    "https://img.icons8.com/ios/250/000000/facebook-new.png",
+    "https://img.icons8.com/ios/250/000000/google-logo.png",
+    "https://img.icons8.com/ios/250/000000/instagram-new.png"
+];
+for(let i = 0; i <2; i++){
+    let tagArea = document.getElementById('people');
+    let newTag = document.createElement('div');
+    newTag.setAttribute('class', 'person');
+    newTag.innerHTML = `
+    <div class="people-img">
+        <img src=${imgSrcArray[Math.floor(Math.random() * imgSrcArray.length)]}>
+    </div>
+    <ul class="container flex-direction-column select-box">
+        <li> <button class="selected">가위 </button></li>
+        <li> <button class="selected">바위</button></li>
+        <li> <button class="selected">보</button></li>
+    </ul>
+                        `;
+    tagArea.appendChild(newTag);
+    const div = document.getElementsByClassName('person');
+}
+/**
  * 사용자 가위 바위 보 정보 가져오기 default 0(가위)
  */
 let human = 2; // 참가자 수
@@ -26,13 +59,13 @@ addButton.addEventListener('click', () => {
     newTag.setAttribute('class', 'person');
     newTag.innerHTML = `
     <div class="people-img">
-    <img src="https://img.icons8.com/ios/250/000000/air-jordan.png">
-</div>
-<ul class="container flex-direction-column select-box">
-    <li> <button class="selected">가위 </button></li>
-    <li> <button class="selected">바위</button></li>
-    <li> <button class="selected">보</button></li>
-</ul>
+        <img src=${imgSrcArray[Math.floor(Math.random() * imgSrcArray.length)]}>
+    </div>
+    <ul class="container flex-direction-column select-box">
+        <li> <button class="selected">가위 </button></li>
+        <li> <button class="selected">바위</button></li>
+        <li> <button class="selected">보</button></li>
+    </ul>
                         `;
     tagArea.appendChild(newTag);
     const div = document.getElementsByClassName('person');
