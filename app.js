@@ -1,3 +1,20 @@
+/**
+ * 사용자 가위 바위 보 정보 가져오기 default 0(가위)
+ */
+let human = 2; // 참가자 수
+let pelpleRspArray =[];
+function getRSP(){
+    const selectsArray = document.querySelectorAll('.select-box');
+
+    selectsArray.forEach((selects, idx) => {
+        selects.querySelectorAll(".selected").forEach((selected,value) => {
+            selected.addEventListener("click",()=>{pelpleRspArray[idx] = value;
+            console.log(pelpleRspArray);})
+        });
+    });
+}
+getRSP()
+
 let addButton = document.getElementById('addPerson');
 let removeButton = document.getElementById('removePerson');
 /**
@@ -8,87 +25,95 @@ addButton.addEventListener('click', () => {
     let newTag = document.createElement('div');
     newTag.setAttribute('class', 'person');
     newTag.innerHTML = `
-        <div class="people-img">사람 이미지</div>
-        <input class="rsp" type="text" />
+    <div class="people-img">
+    <img src="https://img.icons8.com/ios/250/000000/air-jordan.png">
+</div>
+<ul class="container flex-direction-column select-box">
+    <li> <button class="selected">가위 </button></li>
+    <li> <button class="selected">바위</button></li>
+    <li> <button class="selected">보</button></li>
+</ul>
                         `;
     tagArea.appendChild(newTag);
     const div = document.getElementsByClassName('person');
-    if (div.length > 2) {
+    human++;
+    if (human > 2) {
         removeButton.removeAttribute('disabled');
     }
+    getRSP()
 });
 /**
  * 사람 삭제 기능
  */
 removeButton.addEventListener('click', () => {
+    if(human == 2) return;
     const div = document.getElementsByClassName('person');
     const div2 = div[div.length - 1];
     div2.remove();
-    if (div.length === 2) {
+    human--;
+    if (human === 2) {
         removeButton.setAttribute('disabled', '');
     }
+    getRSP()
 });
+
+
+// pelpleRspArray[idx] = value
+
+
 /**
  * 결과 보기 기능
  */
 let resultButton = document.getElementById('resultBtn');
 resultButton.addEventListener('click', () => {
-    const peopleArray = document.getElementsByClassName('rsp');
-    const player = document.getElementsByClassName('people-img');
-    let playerName = [];
-    let rspValue = [];
-    const set = new Set();
-    for (let i = 0; i < peopleArray.length; i++) {
-        set.add(peopleArray[i].value);
-        rspValue.push(peopleArray[i].value);
-        playerName.push(player[i].textContent);
+    let winner = [];
+    let result = ''; // 결과 출력 값
+    for(let i = 0; i <human; i++){
+        if(typeof pelpleRspArray[i] === 'undefined'){ pelpleRspArray[i] = 0}
     }
-    let result = '가 이겼습니다!!';
-    let a = '';
-    let b = '';
-    let victory = '';
-    const arr = Array.from(set);
-    if (set.size == 3 || set.size == 1) {
-        result = '무승부!!';
-    }
-    else if (set.size == 2) {
-        a = arr[0];
-        b = arr[1];
-    }
-    // 가위 : 1 / 바위 : 2 / 보 : 3
-    if (a === '바위') {
-        if (b === '가위') {
-            victory = "바위";
+    let rspSet = new Set(pelpleRspArray);
+    rspSet = [...rspSet]
+    if(rspSet.length === 2){
+        let victory = rspLogic(rspSet[0], rspSet[1])
+        for(let i = 0; i <human; i++){
+            if(pelpleRspArray[i] == victory){winner.push(i + 1)}
         }
-        else if (b === '보') {
-            victory = '보';
-        }
-    }
-    if (a === '가위') {
-        if (b === '바위') {
-            victory = '바위';
-        }
-        else if (b === '보') {
-            victory = '가위';
-        }
-    }
-    if (a === '보') {
-        if (b === '바위') {
-            victory = '보';
-        }
-        else if (b === '가위') {
-            victory = '가위';
-        }
-    }
-    let winner = '';
-    for (let i = 0; i < rspValue.length; i++) {
-        if (victory === rspValue[i]) {
-            winner += playerName[i] + ", ";
-        }
+        winner.forEach((win,idx) => {
+            result += win
+            if(idx + 1 == winner.length){
+                if(winner.length == 1){
+                    result += " 번 사람이 승리했습니다."
+                }else{
+                    result += " 번 사람들이 승리했습니다."
+                }
+            }else{
+                result += ", "
+            }
+        });
+    }else if(rspSet.length === 1){
+        result = '무승부!!'
+    }else{
+        result = '다시!!'
     }
     const resultText = document.getElementById('result-text');
-    resultText.textContent = winner + result;
+    resultText.innerHTML = result;
 });
+
+function rspLogic(a, b){
+    // 가위 : 0 / 바위 : 1 / 보 : 2
+    // 가위 < 바위
+    if((a == 0 || a == 1) && (b == 0 || b == 1)){
+        return 1;
+    }
+    // 바위 < 보
+    if((a == 1 || a == 2) && (b == 1 || b == 2)){
+        return 2
+    }
+    // 보 < 가위
+    if((a == 0 || a == 2) && (b == 0 || b == 2)){
+        return 0;
+    }
+}
 /**
  * 다시하기 기능
 */
