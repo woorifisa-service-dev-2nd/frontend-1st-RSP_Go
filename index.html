@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>RSP GO</title>
-    <script src="app.js"></script>
+    <script defer src="app.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,8 +21,8 @@
         <p class="tittle">RSP Go</p>
         <div class="container">
             <div class="main-box background container margin-bottom flex-direction-column margin-container">
-                <div class="container">
-                    <div class="container people flex-direction-column">
+                <div class="container" id ="people">
+                    <div class="container person flex-direction-column">
                         <div class="people-img">
                             <img src="https://img.icons8.com/ios/250/000000/air-jordan.png">
                         </div>
@@ -32,7 +32,7 @@
                             <li> <button value="2" class="selected">보</button></li>
                         </ul>
                     </div>
-                    <div class="container people flex-direction-column">
+                    <div class="container person flex-direction-column">
                         <div class="people-img">
                             <img src="https://img.icons8.com/ios/250/000000/air-jordan.png">
                         </div>
@@ -46,9 +46,9 @@
             </div>
             <div class="side-box container flex-direction-column margin-container">
                 <button class="right-btn">결과 보기</button>
-                <button class="right-btn people-add">사람 추가</button>
-                <button class="right-btn people-delete">사람 삭제</button>
-                <button class="right-btn reset">다시하기</button>
+                <button class="right-btn" id="addPerson">사람 추가</button>
+                <button class="right-btn" id="removePerson">사람 삭제</button>
+                <button class="right-btn" id="resetBtn">다시하기</button>
             </div>
         </div>
         <div class="result">
