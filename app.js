@@ -35,14 +35,13 @@ for (let i = 0; i < 2; i++) {
  * 사용자 가위 바위 보 정보 가져오기 default 0(가위)
  */
 let human = 2; // 참가자 수
-let pelpleRspArray = [];
+let peopleRspArray = [];
 function getRSP() {
   const selectsArray = document.querySelectorAll(".select-box");
   selectsArray.forEach((selects, idx) => {
     selects.querySelectorAll(".selected").forEach((selected, value) => {
       selected.addEventListener("click", () => {
-        pelpleRspArray[idx] = value;
-        console.log(pelpleRspArray);
+        peopleRspArray[idx] = value;
       });
     });
   });
@@ -92,8 +91,6 @@ removeButton.addEventListener("click", () => {
   getRSP();
 });
 
-// pelpleRspArray[idx] = value
-
 /**
  * 결과 보기 기능
  */
@@ -104,8 +101,8 @@ resultButton.addEventListener("click", () => {
   let notSelected = []; // 선택하지 않은 사람 번호를 저장할 배열
 
   for (let i = 0; i < human; i++) {
-    if (typeof pelpleRspArray[i] === "undefined") {
-      pelpleRspArray[i] = 0;
+    if (typeof peopleRspArray[i] === "undefined") {
+      peopleRspArray[i] = 0;
       notSelected.push(i + 1); // 선택하지 않은 사람 번호 추가
     }
   }
@@ -114,13 +111,12 @@ resultButton.addEventListener("click", () => {
     result =
       notSelected.join(", ") + "번 사람이 가위바위보를 선택하지 않았습니다.";
   } else {
-    console.log(pelpleRspArray.slice(0, human));
-    let rspSet = new Set(pelpleRspArray.slice(0, human));
+    let rspSet = new Set(peopleRspArray.slice(0, human));
     rspSet = [...rspSet];
     if (rspSet.length === 2) {
       let victory = rspLogic(rspSet[0], rspSet[1]);
       for (let i = 0; i < human; i++) {
-        if (pelpleRspArray[i] == victory) {
+        if (peopleRspArray[i] == victory) {
           winner.push(i + 1);
         }
       }
