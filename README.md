@@ -68,7 +68,7 @@
 
 ### 1. 가위 바위 보 선택 기능 
   - 각 플레이어의 선택 항목을 input태그를 사용해 직접 입력하였지만, 사용자의 직접 입력 방식과 오타문제 등 UX의 불편함이 발생하여 button태그로 리팩토링 진행
-  - 참여자 추가, 삭제 시 마다 사용자의 입력을 받기 위해 아래의 함수를 추가함
+  - 사용자의 입력을 받기 위해 아래의 함수를 추가함
   ```
   function getRSP(){
     const selectsArray = document.querySelectorAll('.select-box');
@@ -80,7 +80,8 @@
     });
 }
   ```
-2. 
+### 2. 이미지 삽입
+  - 배경 이미지가 플레이어 이미지와 겹치는 문제가 있었으나 z-index property를 사용해 stack level을 만들어줌으로써 해결함
 
 <br/>
 <br/>
