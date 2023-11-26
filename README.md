@@ -54,6 +54,13 @@
 <br/>
 <br/>
 
+## ⚙ 기능 시연
+- URL : https://frontend-1th-rsp-go.vercel.app/
+<img src="https://github.com/woorifisa-service-dev-2nd/frontend-1th-RSP_Go/assets/65431814/1dec2b48-433f-44e0-9647-69b5304da62d" width="100%" height="100%" />
+
+<br/>
+<br/>
+
 ## ✔ 핵심 기능
 
 ### 1. 가위 바위 보
@@ -164,13 +171,6 @@ resetButton.addEventListener("click", () => {
   location.reload(); // 새로고침
 });
 ```
-
-<br/>
-<br/>
-
-## ⚙ 기능 시연
-- URL : https://frontend-1th-rsp-go.vercel.app/
-<img src="https://github.com/woorifisa-service-dev-2nd/frontend-1th-RSP_Go/assets/65431814/1dec2b48-433f-44e0-9647-69b5304da62d" width="100%" height="100%" />
 
 <br/>
 <br/>
