@@ -92,5 +92,5 @@
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;웹서비스를 만드는 게 쉽지 않았습니다. HTML에서 중첩이 생각보다 많이 필요했고 간단하다고 생각한 기능도 구현하는 것은 간단하지 않았습니다.
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;더 연습해서 실력을 높이고 싶습니다.
 - 송원섭 : 처음 팀으로 진행했던 프로젝트라 재미있게 참여할 수 있었습니다. <br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;서로 모르는 부분, 알고있는 부분을 공유하며 한단계 더 성장할 수 있었던 기회였습니다. (깃, 깃허브 사용법 등)
+서로 모르는 부분, 알고있는 부분을 공유하며 한단계 더 성장할 수 있었던 기회였습니다. (깃, 깃허브 사용법 등)
 - 김유은 :
