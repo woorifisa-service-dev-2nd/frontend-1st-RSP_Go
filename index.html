@@ -1,42 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>RSP GO</title>
     <script defer src="app.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gothic+A1:wght@100&family=Hi+Melody&family=IBM+Plex+Sans+KR:wght@100;600;700&family=Marhey&family=Roboto:wght@300&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gothic+A1:wght@100&family=Hi+Melody&family=IBM+Plex+Sans+KR:wght@100;600;700&family=Marhey&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div class="container flex-direction-column">
-        <p class="tittle">RSP Go</p>
-        <div class="container">
-            <div class="main-box background container margin-bottom flex-direction-column margin-container">
-                <div class="container" id ="people">
-                    
-                </div>
-            </div>
-            <div class="side-box container flex-direction-column margin-container">
-                <button class="right-btn" id ="resultBtn">결과 보기</button>
-                <button class="right-btn" id="addPerson">사람 추가</button>
-                <button class="right-btn" id="removePerson">사람 삭제</button>
-                <button class="right-btn" id="resetBtn">다시하기</button>
-            </div>
+      <p class="tittle">RSP Go</p>
+      <div class="container">
+        <div
+          class="main-box background container margin-bottom flex-direction-column margin-container"
+        >
+          <div class="container" id="people"></div>
         </div>
-        <div class="result">
-            <h2>결과</h2>
-            <div id="result-text">결과 내용</div>
+        <div class="side-box container flex-direction-column margin-container">
+          <button class="right-btn" id="resultBtn">결과 보기</button>
+          <button class="right-btn" id="addPerson">사람 추가</button>
+          <button class="right-btn" id="removePerson">사람 삭제</button>
+          <button class="right-btn" id="resetBtn">다시하기</button>
         </div>
+      </div>
+      <div class="result">
+        <h2>결과</h2>
+        <div id="result-text">누가 이겼을까요?</div>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
