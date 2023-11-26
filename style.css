@@ -1,126 +1,133 @@
 .container {
-    
-    display: flex;
-    /* cross axis(세로) 정렬 */
-    align-items: center; 
-    /* main axis(가로) 정렬 */
-    justify-content: center;
+  font-family: "Hi Melody", sans-serift;
+  display: flex;
+  /* cross axis(세로) 정렬 */
+  align-items: center;
+  /* main axis(가로) 정렬 */
+  justify-content: center;
 }
 
-
-.flex-direction-column{
-    flex-direction: column;
+.people-img > img {
+  width: 190px;
 }
 
+.flex-direction-column {
+  flex-direction: column;
+}
 
 .margin-bottom {
-    margin-bottom: 2em;
+  margin-bottom: 2em;
 }
 .tittle {
-    font-size: 5rem;
-    margin: 0;
+  font-size: 5rem;
+  margin: 0;
 }
 
-.background{
-    width: 40rem;
-    height: 30rem;
-    position: relative;
-    z-index: 1;
+.background {
+  width: 40rem;
+  height: 30rem;
+  position: relative;
+  z-index: 1;
 }
-.background::before{
-    content: "";
-    background: url(https://i0.wp.com/www.thegamegal.com/wp-content/uploads/2012/01/Rock-paper-scissors.png?fit=500%2C330&ssl=1);
-    background-size: cover;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    opacity: 0.2;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
+.background::before {
+  content: "";
+  background: url(https://i0.wp.com/www.thegamegal.com/wp-content/uploads/2012/01/Rock-paper-scissors.png?fit=500%2C330&ssl=1);
+  background-size: cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  opacity: 0.2;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
 }
 
-.person {z-index: 2;}
+.person {
+  z-index: 2;
+  margin-right: 10px;
+}
 
 .right-btn {
-    font-family: 'Hi Melody', sans-serift;
-    width: 12rem;
-    height: 5rem;
-    margin: 0.75rem;
-    padding: 0.75rem 1.25rem;
-    background: transparent;
-    color: black;
-    font-size: 2rem;
-    border: 2px solid black;
-    border-radius: 1rem;
+  font-family: "Hi Melody", sans-serift;
+  width: 12rem;
+  height: 5rem;
+  margin: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  background: transparent;
+  color: black;
+  font-size: 2rem;
+  border: 2px solid black;
+  border-radius: 1rem;
 }
 
-.right-btn:hover{
-    border-color: rgb(136, 205, 136);
+.right-btn:hover {
+  border-color: rgb(136, 205, 136);
 }
 
-.right-btn:active{
-    background-color: mintcream;
+.right-btn:active {
+  background-color: mintcream;
 }
 
-.space-between{
-    justify-content: space-between;
+.space-between {
+  justify-content: space-between;
 }
 
-.people-add>button {
-    margin: 0em 2em 0em 2em;
-    
+.people-add > button {
+  margin: 0em 2em 0em 2em;
 }
 
 .result {
-    font-family: 'Hi Melody', sans-serift;
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
-.result>h2 {
-    font-family: 'Hi Melody', sans-serift;
-    text-align: center;
+.result > h2 {
+  text-align: center;
+  margin: 0;
 }
 
-
-.margin-container{
-    margin: 0 10em 0 10em;
+.result > #result-text {
+  margin-top: 0;
 }
 
-.select-box{
-    width: 200px;
-    list-style: none;
-    background: #FFFFFF;
-    border: 1px solid #C4C4C4;
-    box-sizing: border-box;
-    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
-    border-radius: 10px;
-    margin-top: 9px;
-    padding: 0;
+.margin-container {
+  margin: 0 10em 0 10em;
 }
 
-.selected{
-    border: none;
-    background-color: #FFFFFF;
-    font-family: 'Hi Melody', sans-serift;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 16px;
-    padding: 7px 10px;
-    margin: 5px 0px;
-    box-sizing: border-box;
+.select-box {
+  width: 200px;
+  list-style: none;
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  margin-top: 9px;
+  padding: 0;
 }
 
-.selected:active{
-    background-color: rgb(110, 224, 167);
-    width: 184px;
-    border-radius: 8px;
-    box-sizing: border-box;
-    margin-left: 8px;
+.selected {
+  border: none;
+  background-color: #ffffff;
+  font-family: "Hi Melody", sans-serift;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 16px;
+  padding: 7px 10px;
+  margin: 5px 0px;
+  box-sizing: border-box;
 }
 
-ul li, ul li button {
-    width: 100%;
+.selected:active {
+  background-color: rgb(110, 224, 167);
+  width: 184px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-left: 8px;
+}
+
+ul li,
+ul li button {
+  width: 100%;
 }
