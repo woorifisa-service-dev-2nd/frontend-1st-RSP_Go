@@ -79,6 +79,8 @@ function rspLogic(a, b) {
 }
 ```
 
+<br/>
+
 ### 2. 참가자 추가
 - 사람 추가 버튼을 누르면 참가자가 1명씩 추가됩니다.
 - 게임 참가자는 최대 4명까지만 가능합니다.
@@ -102,6 +104,7 @@ newTag.innerHTML = `
 tagArea.appendChild(newTag);
 ```
   
+<br/>
 
 ### 3. 참가자 삭제
 - 사람 삭제 버튼을 누르면 가장 마지막에 추가된 참가자가 삭제됩니다.
@@ -111,14 +114,56 @@ tagArea.appendChild(newTag);
 const div = document.getElementsByClassName("person");
 const div2 = div[div.length - 1]; // 마지막에 추가된 참가자
 div2.remove();
+human--;
+if (human === 2) { // 최소 2명이 유지되도록
+  removeButton.setAttribute("disabled", "");
+}
 ```
+
+<br/>
 
 ### 4. 결과 확인
 - 결과 보기 버튼을 클릭하면 모든 사용자의 선택을 바탕으로 승자를 결정하고 결과를 출력합니다.
 - 만약 모든 사용자가 선택을 완료하지 않았다면 선택하지 않은 사용자 번호를 출력합니다.
+```javascript
+let rspSet = new Set(peopleRspArray.slice(0, human)); // 중복 제거
+rspSet = [...rspSet];
+if (rspSet.length === 2) { // 가위, 바위, 보 중에서 2가지만 나왔다면
+  let victory = rspLogic(rspSet[0], rspSet[1]);
+  for (let i = 0; i < human; i++) {
+    if (peopleRspArray[i] == victory) {
+      winner.push(i + 1);
+    }
+  }
+  winner.forEach((win, idx) => {
+    result += win;
+    if (idx + 1 == winner.length) {
+      if (winner.length == 1) {
+        result += " 번 사람이 승리했습니다.";
+      } else {
+        result += " 번 사람들이 승리했습니다.";
+      }
+    } else {
+      result += ", ";
+    }
+  });
+} else if (rspSet.length === 1) { // 가위, 바위, 보 중에서 1가지만 나왔다면
+  result = "무승부!!";
+} else { // 가위, 바위, 보 중에서 3가지가 다 나왔다면
+  result = "다시!!"; 
+}
+```
+
+<br/>
 
 ### 5. 다시 하기
 - 다시하기 버튼을 클릭하면 페이지를 새로고침하여 게임을 초기 상태로 되돌립니다.
+```javascript
+let resetButton = document.getElementById("resetBtn");
+resetButton.addEventListener("click", () => {
+  location.reload(); // 새로고침
+});
+```
 
 <br/>
 <br/>
